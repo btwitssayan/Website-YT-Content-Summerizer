@@ -4,3 +4,4 @@ langchain_groq==0.2.2
 streamlit==1.41.1
 validators==0.34.0
 youtube-transcript-api 
+unstructured
