@@ -11,10 +11,7 @@ st.title("🦜 LangChain: Summarize Text From YT or Website")
 st.subheader('Summarize URL')
 
 
-
-## Get the Groq API Key and url(YT or website)to be summarized
-with st.sidebar:
-    groq_api_key=st.text_input("Groq API Key",value="",type="password")
+groq_api_key='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'
 
 generic_url=st.text_input("URL",label_visibility="collapsed")
 
@@ -57,4 +54,3 @@ if st.button("Summarize the Content from YT or Website"):
                 st.success(output_summary)
         except Exception as e:
             st.exception(f"Exception:{e}")
-                    
