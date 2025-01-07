@@ -37,7 +37,7 @@ if st.button("Summarize the Content from YT or Website"):
             llm =ChatGroq(model="llama-3.3-70b-versatile", groq_api_key=groq_api_key)
             with st.spinner("Waiting..."):
                 ## loading the website or yt video data
-                if "youtube.com" in generic_url:
+                if "youtu.be" in generic_url:
                     loader=YoutubeLoader.from_youtube_url(generic_url,add_video_info=False,
                                                             language=["en", "id","hi","bn","be"],
                                                             translation="en",)
