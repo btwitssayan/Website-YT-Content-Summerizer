@@ -48,7 +48,7 @@ if st.button("Summarize the Content from YT or Website"):
                 docs=loader.load()
 
                 ## Chain For Summarization
-                chain=load_summarize_chain(llm,chain_type="map-reduce",prompt=prompt)
+                chain=load_summarize_chain(llm,chain_type="map_reduce",prompt=prompt)
                 output_summary=chain.run(docs)
 
                 st.success(output_summary)
