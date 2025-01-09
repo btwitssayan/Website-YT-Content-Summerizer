@@ -19,21 +19,22 @@ generic_url=st.text_input("URL",label_visibility="collapsed")
 
 
 prompt_template="""
-You are an AI assistant specializing in analyzing and summarizing research papers in the field of biomedical models. Your task is to provide a concise and accurate summary of the given content in 300 words or less.
+You are an AI assistant specializing in analyzing and comparing biomedical models. Your task is to deliver a comparison document for the provided research papers/models. For each model, summarize and evaluate its key characteristics in 500 words or less.
 
 Content to summarize:
 {text}
 
-Provide the summary in the following format:
+Provide the analysis in the following format for each model:
 
 Name of the Model:
-Purpose of the Model:
+Purpose of the Model: (What problem does it solve?)
 Production-level Feasibility: (Can the model be effectively deployed at scale?)
 Dataset Used for Training:
-Performance Metrics: (Key performance indicators such as accuracy, F1-score, AUC, etc.)
-Code Snippet for Testing: (Include a minimal code example for testing the model, if applicable)
-How to Finetune farther:
-Ensure clarity, relevance, and technical precision in the response.
+Performance Metrics: (Key indicators such as accuracy, F1-score, AUC, etc.)
+Pros: (Highlight the strengths of the model)
+Cons: (List the limitations or challenges of the model)
+Unique Features or Innovations: (What sets this model apart from others?)
+Ensure that the document delivers a clear and objective comparison, emphasizing strengths, weaknesses, and distinguishing factors to assist in making an informed decision.
 """
 prompt=PromptTemplate(template=prompt_template,input_variables=["text"])
 
