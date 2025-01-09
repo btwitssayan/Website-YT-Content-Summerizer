@@ -30,10 +30,9 @@ Name of the Model:
 Purpose of the Model:
 Production-level Feasibility: (Can the model be effectively deployed at scale?)
 Dataset Used for Training:
+Performance Metrics: (Key performance indicators such as accuracy, F1-score, AUC, etc.)
 Code Snippet for Testing: (Include a minimal code example for testing the model, if applicable)
 Ensure clarity, relevance, and technical precision in the response.
-
-
 """
 prompt=PromptTemplate(template=prompt_template,input_variables=["text"])
 
