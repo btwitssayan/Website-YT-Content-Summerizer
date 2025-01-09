@@ -19,9 +19,14 @@ generic_url=st.text_input("URL",label_visibility="collapsed")
 
 
 prompt_template="""
+You are a Assitant help me to Understand this Research Paper of Bio Medical Model .
 Provide a summary of the following content in 300 words:
 Content:{text}
-
+Use this format:
+Name:
+Purpose of Model :
+Can it be Used in Production Level:
+Dataset Which the Model is Train on:
 """
 prompt=PromptTemplate(template=prompt_template,input_variables=["text"])
 
