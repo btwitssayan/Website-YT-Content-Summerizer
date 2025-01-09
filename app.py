@@ -19,15 +19,21 @@ generic_url=st.text_input("URL",label_visibility="collapsed")
 
 
 prompt_template="""
-You are a Assitant help me to Understand this Research Paper of Bio Medical Model .
-Provide a summary of the following content in 300 words:
-Content:{text}
-Use this format:
-Name:
-Purpose of Model :
-Can it be Used in Production Level:
-Dataset Which the Model is Train on:
-Code Snippet for test:
+You are an AI assistant specializing in analyzing and summarizing research papers in the field of biomedical models. Your task is to provide a concise and accurate summary of the given content in 300 words or less.
+
+Content to summarize:
+{text}
+
+Provide the summary in the following format:
+
+Name of the Model:
+Purpose of the Model:
+Production-level Feasibility: (Can the model be effectively deployed at scale?)
+Dataset Used for Training:
+Code Snippet for Testing: (Include a minimal code example for testing the model, if applicable)
+Ensure clarity, relevance, and technical precision in the response.
+
+
 """
 prompt=PromptTemplate(template=prompt_template,input_variables=["text"])
 
