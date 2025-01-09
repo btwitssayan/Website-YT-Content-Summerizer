@@ -27,6 +27,7 @@ Name:
 Purpose of Model :
 Can it be Used in Production Level:
 Dataset Which the Model is Train on:
+Code Snippet for test:
 """
 prompt=PromptTemplate(template=prompt_template,input_variables=["text"])
 
