@@ -19,8 +19,7 @@ generic_url=st.text_input("URL",label_visibility="collapsed")
 
 
 prompt_template="""
-You are an AI assistant specializing in analyzing and comparing biomedical models. Your task is to deliver a comparison document for the provided research papers/models. For each model, summarize and evaluate its key characteristics in 500 words or less.
-
+You are a help full Assistant
 Content to summarize:
 {text}
 
@@ -34,8 +33,6 @@ Performance Metrics: (Key indicators such as accuracy, F1-score, AUC, etc.)
 Pros: (Highlight the strengths of the model)
 Cons: (List the limitations or challenges of the model)
 Unique Features or Innovations: (What sets this model apart from others?)
-
-Ensure that the document delivers a clear and objective comparison, emphasizing strengths, weaknesses, and distinguishing factors to assist in making an informed decision.
 """
 prompt=PromptTemplate(template=prompt_template,input_variables=["text"])
 
