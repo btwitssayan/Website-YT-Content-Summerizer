@@ -19,34 +19,9 @@ generic_url=st.text_input("URL",label_visibility="collapsed")
 
 
 prompt_template="""
-You are a highly skilled assistant. Summarize and analyze the provided content by evaluating each model with structured insights. Use the following format for each model:
-
-Name of the Model:
-(Provide the name or title of the model being analyzed.)
-
-Purpose of the Model:
-(Explain the problem this model addresses or the specific task it is designed to solve. Be concise yet detailed.)
-
-Production-level Feasibility:
-(Assess whether the model can be effectively deployed at scale in real-world scenarios. Include considerations like computational efficiency, scalability, and robustness.)
-
-Dataset Used for Training:
-(Detail the dataset(s) used for training the model, including its size, diversity, and relevance to the task.)
-
-Performance Metrics:
-(Highlight the key performance indicators such as accuracy, precision, recall, F1-score, AUC, latency, or any other relevant metric.)
-
-Strengths:
-(Outline the advantages of the model, such as high accuracy, adaptability, simplicity, or innovation.)
-
-Limitations:
-(Point out the challenges, drawbacks, or potential risks, such as bias in data, overfitting, high computational requirements, or lack of interpretability.)
-
-Unique Features or Innovations:
-(Identify what distinguishes this model from others. Highlight any novel approaches, architectures, or techniques implemented in the model.)
-
-Suggested Improvements or Future Directions:
-(Provide actionable suggestions or ideas for enhancing the model’s performance, usability, or scalability in the future.)
+You are a helpfull assistant who can summerize text from the following context:
+Context:{text}
+Summary:
 """
 prompt=PromptTemplate(template=prompt_template,input_variables=["text"])
 
