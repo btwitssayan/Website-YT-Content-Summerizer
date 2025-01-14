@@ -10,7 +10,6 @@ st.set_page_config(page_title="LangChain: Summarize Text From YT or Website", pa
 st.title("🦜 LangChain: Summarize Text From YT or Website")
 st.subheader('Summarize URL')
 
-
 groq_api_key='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'
 
 generic_url=st.text_input("URL",label_visibility="collapsed")
@@ -19,9 +18,9 @@ generic_url=st.text_input("URL",label_visibility="collapsed")
 
 
 prompt_template="""
-You are a helpfull assistant who can summerize text from the following context:
-Context:{text}
-Summary:
+Provide a summary of the following content in 300 words:
+Content:{text}
+
 """
 prompt=PromptTemplate(template=prompt_template,input_variables=["text"])
 
@@ -34,12 +33,12 @@ if st.button("Summarize the Content from YT or Website"):
 
     else:
         try:
-            llm =ChatGroq(model="llama3-70b-8192", groq_api_key=groq_api_key)
+            llm =ChatGroq(model="llama-3.3-70b-versatile", groq_api_key=groq_api_key)
             with st.spinner("Waiting..."):
                 ## loading the website or yt video data
-                if "youtu.be" in generic_url:
+                if "youtube.com" in generic_url:
                     loader=YoutubeLoader.from_youtube_url(generic_url,add_video_info=False,
-                                                            language=["en", "id","hi","bn","be"],
+                                                            language=["en", "id","hi","bn"],
                                                             translation="en",)
 
                 else:
@@ -54,3 +53,4 @@ if st.button("Summarize the Content from YT or Website"):
                 st.success(output_summary)
         except Exception as e:
             st.exception(f"Exception:{e}")
+                    
