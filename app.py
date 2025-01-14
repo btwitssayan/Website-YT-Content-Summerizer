@@ -34,6 +34,7 @@ Performance Metrics: (Key indicators such as accuracy, F1-score, AUC, etc.)
 Pros: (Highlight the strengths of the model)
 Cons: (List the limitations or challenges of the model)
 Unique Features or Innovations: (What sets this model apart from others?)
+
 Ensure that the document delivers a clear and objective comparison, emphasizing strengths, weaknesses, and distinguishing factors to assist in making an informed decision.
 """
 prompt=PromptTemplate(template=prompt_template,input_variables=["text"])
